@@ -1,0 +1,42 @@
+:root {
+    --bg: #485696
+}
+
+/* .caixinha {
+    width: 600px;
+    background-color: var(--bg);
+    padding: 20px;
+    color: white;
+} */
+
+section {
+    width: 100vw;
+}
+
+.caixinha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--bg);
+    width: 80%;
+    min-height: 20vh /*20% da view height*/;
+    padding: 2rem;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    transition: 0.1s all;
+}
+
+/* Truque para manter o tamanho da imagem conistente às mudanças do card */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 600px){
+    .caixinha {
+        background-color: #1B1B1B;
+        padding: 1rem;
+    }
+}
