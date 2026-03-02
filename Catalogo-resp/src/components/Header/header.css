@@ -1,0 +1,107 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.container.headerzin {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 1rem;
+}
+
+.sanduiche {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburguin {
+    width: 100%;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.sanduiche.aberta .hamburguin:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.sanduiche.aberta .hamburguin:nth-child(2) {
+    opacity: 0;
+}
+
+.sanduiche.aberta .hamburguin:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0px);
+    display: grid;
+    gap: 8px;
+    padding: 0.75rem 1rem;
+    background-color: var(--white);
+    border-top: 1px solid var(--bprder);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.nav.aberta {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px, 8px;
+    border-radius: 8px;
+    transition: 0.3s all;
+}
+
+.nav a:hover {
+    background: var(--accent-light);
+}
+
+@media (min-width: 1024px){
+    .sanduiche {
+        display: none;
+    }
+    
+    .nav {
+        position: static;
+        display: flex;
+        gap: 1rem;
+        padding: 1px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+        background: transparent;
+        border: 0;
+        align-items: center;
+    }
+
+}
