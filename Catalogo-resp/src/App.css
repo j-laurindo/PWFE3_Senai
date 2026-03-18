@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root {
+    --bg: #faddf4;
+    --bg2: #c4d1fc;
+
+    --primary: #fd6adb;
+    --secundary: #e47bfe;
+    --accent: #639efc;
+    --accent-light: #adcdff;
+    --white: #fff;
+
+    --text: #0f0f0f;
+    --text-light: #303030;
+    --border: #fbbff985;
+
+    --focus: #ff9539;
+
+    --shadow:0 2px 4px #524f4f;
+
+    --space-1: clamp(0.6rem, 1.2vw, 0.9rem);
+    --space-2: clamp(0.9rem, 2vw, 1.4rem);
+    --space-3: clamp(1.2rem, 3vw, 2rem);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 25px;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}

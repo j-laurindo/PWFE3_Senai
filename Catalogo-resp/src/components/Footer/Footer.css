@@ -1,0 +1,27 @@
+.footer {
+    margin-top: var(--space-3);
+    border-top: var(--space);
+    padding: var(--space-2) 0;
+    color: var(--text-light);
+};
+
+.footer__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-1); 
+    font-size: 0.95rem;
+};
+
+.footer a {
+    font-weight: 700;
+    color: var(--text);
+    background-color: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
