@@ -54,6 +54,15 @@ export default function QuestoesTela(){
                     trancadaIndex ={trancadaIndex}
                     resolvidas = {resolvidas}
                 />
+                {selecionada && (
+                    <QuestionDialog 
+                        questoes = {selecionada}
+                        index = {questoes.findIndex((q) => q.id === selecionada.id)}
+                        total = {total}
+                        onClose = {handleClose}
+                        onCorrect = {handleCorrect}
+                    />
+                )}
             </main>
         </>
     )
